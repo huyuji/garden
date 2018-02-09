@@ -1,0 +1,126 @@
+<!--Notes
+1. This configuration file is case sensitive.
+-->
+
+<config>
+	<Engineers>
+		<Engineer>
+			<NTID>huy7</NTID>
+			<Name>Hu, Yuji</Name>
+      <EmployeeID>107380</EmployeeID>
+		</Engineer>
+		<Engineer>
+			<NTID>chenr9</NTID>
+			<Name>Chen, Roger</Name>
+      <EmployeeID>115677</EmployeeID>
+		</Engineer>	
+		<Engineer>
+			<NTID>wein</NTID>
+			<Name>Wei, Nicholas</Name>
+      <EmployeeID>115801</EmployeeID>
+		</Engineer>	
+		<Engineer>
+			<NTID>wangh21</NTID>
+			<Name>Wang, Hao</Name>
+      <EmployeeID>119158</EmployeeID>
+		</Engineer>	
+		<Engineer>
+			<NTID>pengp2</NTID>
+			<Name>Peng, Peter</Name>
+      <EmployeeID>119146</EmployeeID>
+		</Engineer>	
+		<Engineer>
+			<NTID>zhuanc</NTID>
+			<Name>Zhuang, Cedric</Name>
+		<EmployeeID>62840</EmployeeID>
+		</Engineer>
+    <Engineer>
+			<NTID>wangj1</NTID>
+			<Name>Wang, Ivan</Name>
+		<EmployeeID>69126</EmployeeID>
+		</Engineer>
+    <Engineer>
+			<NTID>zhangc8</NTID>
+			<Name>Zhang, Chen</Name>
+		<EmployeeID>121516</EmployeeID>
+		</Engineer>
+    <Engineer>
+			<NTID>zhangf18</NTID>
+			<Name>Zhang, Frith</Name>
+		<EmployeeID>134776</EmployeeID>
+		</Engineer>
+    <Engineer>
+			<NTID>pingm</NTID>
+			<Name>Ping, Michelle</Name>
+		<EmployeeID>134895</EmployeeID>
+		</Engineer>
+    <Engineer>
+			<NTID>zhange9</NTID>
+			<Name>Zhang, Emmett</Name>
+		<EmployeeID>135106</EmployeeID>
+		</Engineer>
+	<Engineer>
+			<NTID>lir12</NTID>
+			<Name>Li, Roger</Name>
+		<EmployeeID>135515</EmployeeID>
+	</Engineer>
+	<Engineer>
+			<NTID>zhanga12</NTID>
+			<Name>Zhang, Anzhan</Name>
+		<EmployeeID>119286</EmployeeID>
+	</Engineer>
+	</Engineers>
+  
+  <ReportTitle>China COE Unisphere Performance Tools - Weekly Status Report</ReportTitle>
+  <Releases>
+    <Release>
+      <Name>KittyHawk</Name>
+    </Release>  
+    <Release>
+      <Name>novalis</Name>
+    </Release>
+    <Release>
+      <Name>draconis</Name>
+    </Release>
+    <Release>
+      <Name>others</Name>
+    </Release>
+    <Release>
+      <Name>electra</Name>
+    </Release>
+    <Release>
+      <Name>rockies</Name>
+    </Release>
+    <Release>
+      <Name>mozzo</Name>
+    </Release>
+    <Release>
+      <Name>neo b mr4</Name>
+    </Release>
+    <Release>
+      <Name>neob mr4</Name>
+    </Release>
+    <Release>
+      <Name>kittyhawk</Name>
+    </Release>
+    <Release>
+      <Name>franklin</Name>
+      <Date>2011-9-12</Date>
+    </Release>
+    <Release>
+      <Name>dorado</Name>
+      <Date>2012-7-20</Date>
+    </Release>
+    <Release>
+      <Name>inyo</Name>
+      <Date>2012-7-20</Date>
+    </Release>   
+    <Release>
+      <Name>inyo mr1</Name>
+      <Date>2012-7-20</Date>
+    </Release>      
+	<Release>
+	  <Name>unallocated</Name>
+	</Release>
+  </Releases>  
+</config>

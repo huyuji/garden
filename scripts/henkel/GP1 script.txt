@@ -1,0 +1,469 @@
+'udpate 'manual before use
+    
+Sub Import()
+'
+' Import_L6 Macro
+' Macro recorded 6/17/2012 by Gardener
+'
+    'Source Sheet, Destination Sheet
+    Dim SheetMap(1 To 15, 1 To 2) As String
+    Dim SheetMap2(1 To 12, 1 To 2) As String
+    Dim CellMap(1 To 15, 1 To 2) As String
+    
+    InitSheetMap SheetMap
+    InitSheetmap2 SheetMap2
+    InitCellMap CellMap
+    
+    ImportTable1 SheetMap
+    ImportLastYear SheetMap2
+    ImportLastYear2 CellMap
+    ImportL6 CellMap
+    ImportDiscount CellMap
+    
+    MsgBox ("Finished")
+    
+End Sub
+
+Function InitCellMap(CellMap As Variant)
+    CellMap(1, 1) = "total"
+    CellMap(1, 2) = "TotalCompany"
+    
+    CellMap(2, 1) = "Fa"
+    CellMap(2, 2) = "FA"
+    
+    CellMap(3, 1) = "HEM"
+    CellMap(3, 2) = "HEM"
+    
+    CellMap(4, 1) = "KM"
+    CellMap(4, 2) = "KM"
+    
+    CellMap(5, 1) = "BZS"
+    CellMap(5, 2) = "BZS"
+    
+    CellMap(6, 1) = "GM"
+    CellMap(6, 2) = "GM"
+    
+    CellMap(7, 1) = "DEP"
+    CellMap(7, 2) = "DEP"
+    
+    CellMap(8, 1) = "BRILLIANCE"
+    CellMap(8, 2) = "Bri"
+    
+    CellMap(9, 1) = "N&E"
+    CellMap(9, 2) = "NE"
+    
+    CellMap(10, 1) = "Extra Care"
+    CellMap(10, 2) = "EC"
+    
+    CellMap(11, 1) = "Got2b"
+    CellMap(11, 2) = "Got2b"
+    
+    CellMap(12, 1) = "Syoss care"
+    CellMap(12, 2) = "Syoss care"
+    
+    CellMap(13, 1) = "Syoss Styling"
+    CellMap(13, 2) = "Syoss styling"
+    
+    CellMap(14, 1) = "Freshlight"
+    CellMap(14, 2) = "FL"
+    
+    CellMap(15, 1) = "Syoss color"
+    CellMap(15, 2) = "Syoss color"
+    
+End Function
+
+Function InitSheetmap2(SheetMap As Variant)
+    SheetMap(1, 1) = "TotalCompany"
+    SheetMap(1, 2) = "TotalCompany"
+    
+    SheetMap(2, 1) = "FA"
+    SheetMap(2, 2) = "FA"
+    
+    SheetMap(3, 1) = "HEM"
+    SheetMap(3, 2) = "HEM"
+    
+    SheetMap(4, 1) = "KM"
+    SheetMap(4, 2) = "KM"
+    
+    SheetMap(5, 1) = "BZS"
+    SheetMap(5, 2) = "BZS"
+    
+    SheetMap(6, 1) = "GM"
+    SheetMap(6, 2) = "GM"
+    
+    SheetMap(7, 1) = "DEP"
+    SheetMap(7, 2) = "DEP"
+    
+    SheetMap(8, 1) = "Brilliance"
+    SheetMap(8, 2) = "Bri"
+    
+    SheetMap(9, 1) = "N&E"
+    SheetMap(9, 2) = "NE"
+    
+    SheetMap(10, 1) = "EC"
+    SheetMap(10, 2) = "EC"
+    
+    SheetMap(11, 1) = "Got2b"
+    SheetMap(11, 2) = "Got2b"
+    
+    SheetMap(12, 1) = "KX0"
+    SheetMap(12, 2) = "FL"
+End Function
+
+Function InitSheetMap(SheetMap As Variant)
+    SheetMap(1, 1) = "TotalCompany"
+    SheetMap(1, 2) = "TotalCompany"
+    
+    SheetMap(2, 1) = "KAA"
+    SheetMap(2, 2) = "FA"
+    
+    SheetMap(3, 1) = "KC0"
+    SheetMap(3, 2) = "HEM"
+    
+    SheetMap(4, 1) = "KD0"
+    SheetMap(4, 2) = "KM"
+    
+    SheetMap(5, 1) = "KE0"
+    SheetMap(5, 2) = "BZS"
+    
+    SheetMap(6, 1) = "KF0"
+    SheetMap(6, 2) = "GM"
+    
+    SheetMap(7, 1) = "KG0"
+    SheetMap(7, 2) = "DEP"
+    
+    SheetMap(8, 1) = "KLY"
+    SheetMap(8, 2) = "Bri"
+    
+    SheetMap(9, 1) = "KLB"
+    SheetMap(9, 2) = "NE"
+    
+    SheetMap(10, 1) = "KLZ"
+    SheetMap(10, 2) = "EC"
+    
+    SheetMap(11, 1) = "KN0"
+    SheetMap(11, 2) = "Got2b"
+    
+    SheetMap(12, 1) = "KO0"
+    SheetMap(12, 2) = "Syoss care"
+    
+    SheetMap(13, 1) = "KOB"
+    SheetMap(13, 2) = "Syoss styling"
+    
+    SheetMap(14, 1) = "KX0"
+    SheetMap(14, 2) = "FL"
+
+    SheetMap(15, 1) = "KOA"
+    SheetMap(15, 2) = "Syoss color"
+End Function
+
+
+Function ImportLastYearPerSheet(srcSheet As Excel.Worksheet, dstSheet As Excel.Worksheet)
+    
+    Row = 1
+    Do While UCase(Trim(srcSheet.Cells(Row, 1).Value)) <> "NO."
+        Row = Row + 1
+        If Row > 200 Then Exit Function
+    Loop
+    Row = Row + 1
+    Do While UCase(Trim(srcSheet.Cells(Row, 1).Value)) <> "NO."
+        Row = Row + 1
+        If Row > 200 Then Exit Function
+    Loop
+    Row = Row + 2
+    
+    For Offset = 0 To 5
+        'dstSheet.Cells(38, 4).Value = srcSheet.Cells(Row + 1, 8).Value
+        'dstSheet.Cells(39, 4).Value = srcSheet.Cells(Row + 0, 8).Value
+        'dstSheet.Cells(40, 4).Value = srcSheet.Cells(Row + 2, 8).Value
+        dstSheet.Cells(41, 4).Value = srcSheet.Cells(Row + 3, 8).Value
+        dstSheet.Cells(42, 4).Value = srcSheet.Cells(Row + 4, 8).Value
+        dstSheet.Cells(43, 4).Value = srcSheet.Cells(Row + 5, 8).Value
+    Next Offset
+
+End Function
+
+Function ImportLastYear(SheetMap As Variant)
+
+    Dim xlApp As Excel.Application
+    Set xlApp = New Excel.Application
+    
+    Dim xlBook As Excel.Workbook
+    On Error Resume Next
+    Set xlBook = xlApp.Workbooks.Open(ThisWorkbook.Path + "\GP1 brand analysis 2011_12.xls") 'manual
+    If Err.Number <> 0 Then
+        Set xlBook = xlApp.Workbooks.Open(ChooseOneFile())
+    End If
+
+    For i = 1 To 12
+        Dim srcSheet As Excel.Worksheet
+        Set srcSheet = xlBook.Worksheets(SheetMap(i, 1))
+        Dim dstSheet As Excel.Worksheet
+        Set dstSheet = Worksheets(SheetMap(i, 2))
+        
+        ImportLastYearPerSheet srcSheet, dstSheet
+    Next
+
+FINAL:
+    xlBook.Close SaveChanges:=False
+
+End Function
+
+Function ImportLastYear2(CellMap As Variant)
+    Dim xlApp As Excel.Application
+    Set xlApp = New Excel.Application
+    
+    Dim xlBook As Excel.Workbook
+    On Error Resume Next
+    Set xlBook = xlApp.Workbooks.Open(ThisWorkbook.Path + "\Price Discount 1212.xls") 'manual
+    If Err.Number <> 0 Then
+        Set xlBook = xlApp.Workbooks.Open(ChooseOneFile())
+    End If
+    
+    Dim sheet As Excel.Worksheet
+    Set sheet = xlBook.Worksheets("12 by brand")
+    
+    For i = 1 To 15
+        Dim dstSheet As Excel.Worksheet
+        Set dstSheet = Worksheets(CellMap(i, 2))
+        
+        Column = 1
+        Do
+            If UCase(Trim(sheet.Cells(3, Column).Value)) = "Y11 YTD" Then
+                Exit Do
+            End If
+            Column = Column + 1
+            If Column > 200 Then GoTo FINAL
+        Loop
+        
+        Row = 1
+        Do
+            If UCase(Trim(sheet.Cells(Row, 1).Value)) = UCase(CellMap(i, 1)) Then
+               
+                Count = 0
+                Do
+                    If "PLD" = UCase(Trim(sheet.Cells(4, Column).Value)) Then
+                        dstSheet.Range("D38").Value = sheet.Cells(Row, Column).Value / 1000
+                        Count = Count + 1
+                    End If
+                    
+                    If "PPD" = UCase(Trim(sheet.Cells(4, Column).Value)) Then
+                        dstSheet.Range("D39").Value = sheet.Cells(Row, Column).Value / 1000
+                        Count = Count + 1
+                    End If
+                    Column = Column + 1
+                    If Column > 200 Or Count = 2 Then
+                        dstSheet.Range("D40").Formula = "=D44 - D38 - D39 - D41 - D42 - D43"
+                        Exit Do
+                    End If
+                Loop
+                
+                Exit Do
+            End If
+            Row = Row + 1
+            If Row > 200 Then Exit Do
+        Loop
+    Next
+    
+FINAL:
+    xlBook.Close SaveChanges:=False
+End Function
+
+Function ImportDiscount(CellMap As Variant)
+    Dim xlApp As Excel.Application
+    Set xlApp = New Excel.Application
+    
+    Dim xlBook As Excel.Workbook
+    On Error Resume Next
+    Set xlBook = xlApp.Workbooks.Open(ThisWorkbook.Path + "\Price Discount 1212.xls") 'manual
+    If Err.Number <> 0 Then
+        Set xlBook = xlApp.Workbooks.Open(ChooseOneFile())
+    End If
+    
+    Dim sheet As Excel.Worksheet
+    Set sheet = xlBook.Worksheets("12 by brand")
+    
+    For i = 1 To 15
+        Dim dstSheet As Excel.Worksheet
+        Set dstSheet = Worksheets(CellMap(i, 2))
+        
+        Row = 1
+        Do
+            If UCase(Trim(sheet.Cells(Row, 1).Value)) = UCase(CellMap(i, 1)) Then
+               
+                Column = 1
+                Count = 0
+                Do
+                    If "PLD" = UCase(Trim(sheet.Cells(4, Column).Value)) Then
+                        dstSheet.Range("H38").Value = sheet.Cells(Row, Column).Value / 1000
+                        Count = Count + 1
+                    End If
+                    
+                    If "PPD" = UCase(Trim(sheet.Cells(4, Column).Value)) Then
+                        dstSheet.Range("H39").Value = sheet.Cells(Row, Column).Value / 1000
+                        Count = Count + 1
+                    End If
+                    Column = Column + 1
+                    If Column > 200 Or Count = 2 Then
+                        dstSheet.Range("H40").Formula = "=H44 - H38 - H39 - H41 - H42 - H43"
+                        Exit Do
+                    End If
+                Loop
+                
+                Column = 1
+                Do While UCase(Trim(sheet.Cells(2, Column).Value)) <> "2012"
+                    Column = Column + 1
+                    If Column > 200 Then GoTo FINAL
+                Loop
+                
+                Do While UCase(Trim(sheet.Cells(3, Column).Value)) <> "DEC" 'manual
+                    Column = Column + 1
+                    If Column > 200 Then GoTo FINAL
+                Loop
+                
+                Count = 0
+                Do
+                    If "PLD" = UCase(Trim(sheet.Cells(4, Column).Value)) Then
+                        dstSheet.Range("L38").Value = sheet.Cells(Row, Column).Value2 / 1000
+                        Count = Count + 1
+                    End If
+                    
+                    If "PPD" = UCase(Trim(sheet.Cells(4, Column).Value)) Then
+                        dstSheet.Range("L39").Value = sheet.Cells(Row, Column).Value / 1000
+                        Count = Count + 1
+                    End If
+                    Column = Column + 1
+                    If Column > 200 Or Count = 2 Then
+                        dstSheet.Range("L40").Formula = "=L44 - L38 - L39 - L41 - L42 - L43"
+                        Exit Do
+                    End If
+                Loop
+                Exit Do
+            End If
+            Row = Row + 1
+            If Row > 200 Then Exit Do
+        Loop
+    Next
+    
+FINAL:
+    xlBook.Close SaveChanges:=False
+End Function
+
+Function ImportL6(CellMap As Variant)
+    Dim xlApp As Excel.Application
+    Set xlApp = New Excel.Application
+    
+    Dim xlBook As Excel.Workbook
+    Dim sheet As Excel.Worksheet
+    
+    On Error Resume Next
+    Set xlBook = xlApp.Workbooks.Open(ThisWorkbook.Path + "\2012.12  L6 accrual to Finance 1.2.xls") 'manual
+    If Err.Number <> 0 Then
+        Set xlBook = xlApp.Workbooks.Open(ChooseOneFile())
+    End If
+    
+    Set sheet = xlBook.Worksheets("L6 REBATE")
+
+    For i = 1 To 15
+        Dim dstSheet As Excel.Worksheet
+        Set dstSheet = Worksheets(CellMap(i, 2))
+        
+        Row = 1
+        Found = 0
+        Do
+            If UCase(Trim(sheet.Cells(Row, 1).Value)) = "REBATE" Then
+                Column = 1
+                Do
+                    If UCase(Trim(sheet.Cells(Row, Column).Value)) = "DEC" Then 'manual
+                        Found = 1
+                        Exit Do
+                    End If
+                    
+                    Column = Column + 1
+                    If Column > 200 Then
+                        Exit Do
+                    End If
+                Loop
+            End If
+            
+            If Found = 1 Then Exit Do
+            
+            Row = Row + 1
+            If Row > 200 Then GoTo FINAL
+        Loop
+        
+        Do
+            If UCase(Trim(sheet.Range("A" & Row).Value)) = UCase(CellMap(i, 1)) Then Exit Do
+            Row = Row + 1
+            If Row > 200 Then Exit Do
+        Loop
+        
+        dstSheet.Range("H41").Value = sheet.Range("U" & Row).Value / 1000
+        dstSheet.Range("H42").Value = sheet.Range("V" & Row).Value / 1000
+        dstSheet.Range("H43").Value = sheet.Range("W" & Row).Value / 1000
+        
+        dstSheet.Range("L41").Value = sheet.Range("I" & Row).Value / 1000
+        dstSheet.Range("L42").Value = sheet.Range("J" & Row).Value / 1000
+        dstSheet.Range("L43").Value = sheet.Range("K" & Row).Value / 1000
+    Next
+    
+FINAL:
+    xlBook.Close SaveChanges:=False
+    
+End Function
+
+Function ImportTable1PerSheet(srcSheet As Excel.Worksheet, dstSheet As Excel.Worksheet)
+    
+    For Row = 1 To 32
+        For Column = 1 To 13
+            dstSheet.Cells(Row, Column).Formula = srcSheet.Cells(Row, Column).Formula
+        Next Column
+    Next Row
+    
+End Function
+
+Function ImportTable1(SheetMap As Variant)
+    Dim xlApp As Excel.Application
+    Set xlApp = New Excel.Application
+    
+    Dim xlBook As Excel.Workbook
+    On Error Resume Next
+    Set xlBook = xlApp.Workbooks.Open(ThisWorkbook.Path + "\2012012_HCD5JV_UK MG2 Consol.xls") 'manual
+    If Err.Number <> 0 Then
+        Set xlBook = xlApp.Workbooks.Open(ChooseOneFile())
+    End If
+
+    For i = 1 To 15
+        Dim srcSheet As Excel.Worksheet
+        Set srcSheet = xlBook.Worksheets(SheetMap(i, 1))
+        Dim dstSheet As Excel.Worksheet
+        Set dstSheet = Worksheets(SheetMap(i, 2))
+        
+        ImportTable1PerSheet srcSheet, dstSheet
+    Next
+
+    xlBook.Close SaveChanges:=False
+End Function
+
+
+Function ChooseOneFile(Optional TitleStr As String = "Select File", _
+                       Optional TypesDec As String = "All Types", _
+                       Optional Exten As String = "*.*") As String
+Dim dlgOpen     As FileDialog
+Set dlgOpen = Application.FileDialog(msoFileDialogFilePicker)
+With dlgOpen
+        .Title = TitleStr
+        .Filters.Clear
+        .Filters.Add TypesDec, Exten
+        .AllowMultiSelect = False
+        If .Show = -1 Then
+'                 .AllowMultiSelect   =   True
+'                 For   Each   vrtSelectedItem   In   .SelectedItems
+'                         MsgBox   "Path   name:   "   &   vrtSelectedItem
+'                 Next   vrtSelectedItem
+        ChooseOneFile = .SelectedItems(1)
+        End If
+End With
+Set dlgOpen = Nothing
+End Function
+

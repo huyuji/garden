@@ -1,0 +1,1 @@
+"%program%\Git\bin\sh.exe" --login -i

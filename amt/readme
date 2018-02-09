@@ -1,0 +1,11 @@
+Automobile Maintenance Tracker API Source
+
+The source is coded with standard C++, STL and Boost 1.55.0.
+
+Unit test is coded with google test 1.60 and google mock 1.60.
+
+The sample Visual Studio project is created with Visual Studio 2013 Community. The lib files in thirdparty is compiled with it as well.
+
+To use the API, start with amt.h and other header files in AMTService/public.
+
+To see some code in action, start with AMTService/unittest/TestAMTServiceImpl.h

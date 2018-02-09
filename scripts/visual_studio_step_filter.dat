@@ -1,0 +1,142 @@
+;;Cedric's autoexp.dat
+NAVSmrPtrImpl<*>|NAVSmrPtr<*>{
+  preview
+  (
+    [*$e._pointee->_pointer]
+  )
+ 
+  children
+  (
+    #(ptr: *$e._pointee->_pointer
+    ;,count: $e._pointee->_referenceCount._value
+    ;,sharedCount: $e._pointee->_sharedReferenceCount->_value
+    )
+  )
+}
+
+NAVString{
+  preview
+  (
+    [$e._buffer, s]
+  )
+}
+
+NAVValSlist<*>{
+
+    children
+    (
+        #list
+        (
+            head : $c._head,
+            size : $c._entries,
+            next : _next,
+        last : $c._last
+        ) : $e._data
+    )
+                 
+    preview
+    (
+        #(
+            "[entry=",
+            $e._entries,
+            "](",
+         
+            #list
+            (
+                head : $c._head,
+            size : $c._entries,
+            next : _next,
+        last : $c._last
+            ) : $e._data,
+         
+            ")"
+        )
+    )                 
+}
+
+CNaviProperty{
+
+  preview
+  (
+    #(
+      "[name=",
+      [$e._name,s],
+      "][isKey=",
+      [$e._isKey],
+      "][value=",
+      [(*((CNaviValue*)$e._value._pointee->_pointer))],
+      "]"
+    )
+  )
+}
+
+INaviProperty{
+  preview
+  (
+    #(
+      "[name=",
+      [(*((CNaviProperty *)&$e))._name,s],
+      "][isKey=",
+      [(*((CNaviProperty *)&$e))._isKey],
+      "][value=",
+      [(*((CNaviValue*)(*((CNaviProperty *)&$e))._value._pointee->_pointer))],
+      "]"
+    )
+  )
+}
+
+INaviType{
+  preview
+  (
+    #(
+      [(*((CNaviType *)&$e))._name,s]
+    )
+  )
+}
+
+CNaviType{
+  preview
+  (
+    #(
+      "[name=",
+      [$e._name,s],
+      "][attr=",
+      [$e._attributes, hx],
+      "]"
+    )
+  )
+}
+
+CNaviValue{
+  preview
+  (
+    #(
+    ;I've had enough.  Only display string here.
+      "[value=",
+      [$e._value._stringValue],
+      "][type=",
+      [$e._type],
+      "][isAssign=",
+      [$e._isAssigned],
+      "]"
+    )
+  )
+}
+
+INaviNameSpacePath{
+  preview
+  (
+    #(
+      [(*((CNaviNameSpacePath *)&$e)),s]
+    )
+  )
+}
+
+INaviInstanceName{
+  preview
+  (
+    #(
+      [(*((ecom::pf::InstanceName *)&$e)),s]
+    )
+  )
+}

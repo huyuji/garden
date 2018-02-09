@@ -1,0 +1,1 @@
+c:\Windows\System32\wbem\wmic product where name="curvecapture" call uninstall /nointeractive

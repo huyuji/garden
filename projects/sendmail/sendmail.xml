@@ -1,0 +1,47 @@
+<!-- sendmail config -->
+
+<!-- 
+wildcard format - (*)(format string,start index,end index):
+format string follow the C# specification; 
+start index and end index must be numbers; 
+there should be no spaces in the format.
+examples:
+"mailbox(*)({0},1,4)@saas.com" 
+expands to 
+	mailbox1@saas.com
+	mailbox2@saas.com
+	mailbox3@saas.com
+	mailbox4@saas.com
+
+"mailbox(*)({0:00},1,4)@saas.com" 
+expands to 
+	mailbox01@saas.com
+	mailbox02@saas.com
+	mailbox03@saas.com
+	mailbox04@saas.com
+-->
+
+<!--
+rules:
+1.	titles and bodies are used in pairs, thus the number of titles must match the number of bodies. 
+2.	all the send actions use the same password and host.
+3.	foreach frombox in the from list
+		foreach tobox in the to list, which is not the same mailbox as frombox
+			foreach title and body pair
+				send a mail from frombox to tobox, using the title and body.
+-->
+
+<config>
+	<from>mailbox(*)({0},1,4)@saas.com</from>
+	
+	<to>mailbox(*)({0},1,4)@saas.com</to>
+	
+	<title>from sendmail (*)({0},1,2)</title>
+	
+	<body>blur (*)({0},1,2)</body>
+	
+	<password>emc</password>
+	
+	<host>10.32.175.196</host>
+	
+</config>

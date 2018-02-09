@@ -1,0 +1,1 @@
+for /D %%f in (%cd%\*) do 7z a "%%f.zip" "%%f"
