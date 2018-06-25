@@ -1,0 +1,1 @@
+Write-EventLog –LogName System –EntryType Information –EventID 6005 -Source 'EventLog' -Message 'The Event log service was started.'
