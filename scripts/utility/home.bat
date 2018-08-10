@@ -10,4 +10,4 @@ rem start "" "C:\Users\Yuji\AppData\Roaming\baidu\BaiduNetdisk\BaiduNetdisk.exe"
 
 rem home
 start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --profile-directory="Default"
-rem start "" "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
+start "" "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
