@@ -30,5 +30,5 @@ void testUndefinedBehavior();
 // Unlike C, C++ defines an implicit return 0; at the end of int main()
 int main()
 {
-  testCpp();
+  testStlSet();
 }

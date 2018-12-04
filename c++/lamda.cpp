@@ -42,9 +42,10 @@ namespace
   {
     // lambdas should have no default constructor.
     // but it seems it works in visual studio.
-    auto l1 = []{ std::cout << "l1 called\n"; };
-    std::array<decltype(l1), 3> a1;
-    a1[2]();
+	// it seems this has been fixed in visual studio 2017.
+	auto l1 = []{ std::cout << "l1 called\n"; };
+	// std::array<decltype(l1), 3> a1;
+    // a1[2]();
 
     auto l3 = []{ std::cout << "l2 called\n"; };
     // lambdas have no assignment operator. 
