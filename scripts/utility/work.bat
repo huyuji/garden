@@ -1,5 +1,5 @@
 rem common
-start "" "C:\Program Files\Google\Drive\googledrivesync.exe"
+rem start "" "C:\Program Files\Google\Drive\googledrivesync.exe"
 start "" "C:\Program Files\Everything\Everything.exe"
 start "" "e:\program\Ditto\ditto.exe"
 start "" "E:\program\AutoHotkey\AutoHotkey.exe" "E:\code\garden\scripts\wordexpander.ahk"
