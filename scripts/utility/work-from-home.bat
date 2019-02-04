@@ -8,5 +8,9 @@ start "" "C:\Program Files (x86)\FreeCommanderXE\FreeCommander.exe"
 start "" "C:\Program Files (x86)\eudic\eudic.exe"
 start "" "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
 
+rem work
+start "" ""C:\Program Files (x86)\HipChat4\HipChat.exe""
+start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 2"
+
 rem home
 start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 1"
