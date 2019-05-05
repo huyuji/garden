@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\Encrypt]
+@="&Encrypt"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Encrypt\command]
+@="D:\\Documents\\GitHub\\garden\\scripts\\encrypt.bat \"%1\""
+
+[HKEY_CLASSES_ROOT\*\shell\Encrypt]
+@="Encrypt"
+
+[HKEY_CLASSES_ROOT\*\shell\Encrypt\command]
+@="D:\\Documents\\GitHub\\garden\\scripts\\encrypt.bat \"%1\""
