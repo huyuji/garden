@@ -4,8 +4,8 @@ CheckAndGo(str)
   str = %str%
   StringLower, str, str
 
-  if(RegExMatch(str, "cc(\d{3})", JiraID) > 0
-    or RegExMatch(str, "cc-(\d{3})", JiraID) > 0)
+  if(RegExMatch(str, "cc(\d{4})", JiraID) > 0
+    or RegExMatch(str, "cc-(\d{4})", JiraID) > 0)
   {
     run, http://jira.curvedms.org/browse/CC-%JiraID1%
   }
