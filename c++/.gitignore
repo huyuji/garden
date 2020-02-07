@@ -1,0 +1,6 @@
+Testing
+CMakeFiles
+CMakeCache.txt
+*.cmake
+*.tcl
+Makefile

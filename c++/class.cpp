@@ -43,7 +43,7 @@ namespace
     B b;
     std::cout << b.i1 << std::endl;
     std::cout << (b.np == nullptr) << std::endl;
-    std::cout << (int)b.np << std::endl;
+    std::cout << static_cast<int>(b.np) << std::endl;
   }
 
   class C {

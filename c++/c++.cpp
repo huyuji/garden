@@ -5,6 +5,8 @@
 #include <iterator>
 #include <memory>
 #include <assert.h>
+#include <limits>
+#include <string.h>
 
 namespace
 {
@@ -86,7 +88,7 @@ namespace
 
     // In this case, c declares a function having deque<int> as return type. 
     // Its first parameter is of type istream_iterator<int> with the name cin, 
-    //   and its second unnamed parameter is of type ¡°function taking no arguments returning istream_iterator<int>.¡± 
+    //   and its second unnamed parameter is of type ï¿½ï¿½function taking no arguments returning istream_iterator<int>.ï¿½ï¿½ 
     // This construct is valid syntactically as either a declaration or an expression. 
     // So, according to language rules, it is treated as a declaration. 
     // The extra parentheses in the line above force the initializer not to match the syntax of a declaration.
