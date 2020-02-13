@@ -43,7 +43,7 @@ namespace
     B b;
     std::cout << b.i1 << std::endl;
     std::cout << (b.np == nullptr) << std::endl;
-    std::cout << static_cast<int>(b.np) << std::endl;
+    std::cout << (long)(b.np) << std::endl;
   }
 
   class C {
@@ -56,9 +56,10 @@ namespace
 
   // make the second parameter have a default argument
   // now this constructor is a copy constructor too. 
-  inline C::C(C const&, int foo = 0) {
-    std::cout << "weird copy constructor called\n";
-  }
+  // 2020-02-10 this doesn't compile with clang 6.0.0: error: addition of default argument on redeclaration makes this constructor a copy constructor
+  //inline C::C(C const&, int foo = 0) {
+  //  std::cout << "weird copy constructor called\n";
+  //}
 
   void f3()
   {

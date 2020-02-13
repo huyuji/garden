@@ -1,6 +1,7 @@
 #include <unordered_set>
 #include <iostream>
 #include <functional>
+#include <vector>
 
 namespace
 {

@@ -16,7 +16,7 @@ target_sources(cpp
     hash.cpp
     inheritance.cpp
     inline.cpp
-    lamda.cpp
+    lambda.cpp
     macro.cpp
     main.cpp
     return_value_optimization.cpp
@@ -41,6 +41,7 @@ target_sources(cpp
     switch.cpp
     template.cpp
     undefined_behavior.cpp
+    structured_binding.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

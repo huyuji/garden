@@ -8,7 +8,7 @@ namespace
   {
     // Because no constructors or assignment operators for initializer lists are provided, 
     //   initializing an array during its declaration is the only way to use initializer lists. 
-    // For this reason, you also can¡¯t use the parenthesis syntax to specify initial values
+    // For this reason, you also canï¿½ï¿½t use the parenthesis syntax to specify initial values
     //std::array<int, 5> a({ 1, 2, 3, 4, 5 });
 
     std::array<int, 5> a = { 1, 2, 3, 4, 5 };
@@ -16,7 +16,7 @@ namespace
     // However, its name is not specified in the standard; 
     //   thus, any direct access to the public member that holds all elements 
     //   results in undefined behavior and is definitely not portable.
-    std::cout << a._Elems << std::endl;
+    //std::cout << a._Elems << std::endl; // works with visual studio
   }
 
   void f2()
@@ -36,7 +36,7 @@ namespace
     assert(a.cbegin() == a.cend());
     
     // For data() , the return value is unspecified, 
-    //   which means that you can pass the return value to other places as long as you don¡¯t dereference it.
+    //   which means that you can pass the return value to other places as long as you donï¿½ï¿½t dereference it.
     int* pi = a.data();
   }
 

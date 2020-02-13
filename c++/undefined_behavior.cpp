@@ -7,7 +7,7 @@ namespace
   void f1()
   {
     int i = 19;
-    i = i++;
+    //i = i++; // clang 6.0.0 warning: multiple unsequenced modifications to 'i'
   }
 }
 

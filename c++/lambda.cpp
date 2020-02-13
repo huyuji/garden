@@ -7,7 +7,7 @@ namespace
 {
   void f1()
   {
-    // return type of lamda is deduced from return value if not specified
+    // return type of lambda is deduced from return value if not specified
     auto l1 = [] { return 11; };
     std::cout << l1() << std::endl;
   }
@@ -15,18 +15,18 @@ namespace
   void f2()
   {
     int i = 13;
-    //[=] { i++; }(); // a lamda would not compile if it attempts to change a capture copied by value
+    //[=] { i++; }(); // a lambda would not compile if it attempts to change a capture copied by value
 
     // with mutable, capture copied by value can be modified
-    // and the lamda becomes stateful since the modification will be visible in subsequent calls
-    auto l = [=]() mutable { i++; std::cout << "in lamda i is " << i << std::endl; };
+    // and the lambda becomes stateful since the modification will be visible in subsequent calls
+    auto l = [=]() mutable { i++; std::cout << "in lambda i is " << i << std::endl; };
     l();
     l();
-    std::cout << "outside lamda i is " << i << std::endl;
+    std::cout << "outside lambda i is " << i << std::endl;
   }
 
   // The type of a lambda is an anonymous function object (or functor) that is unique for each lambda expression.
-  // auto, decltype and function template can deal with the type of lamda
+  // auto, decltype and function template can deal with the type of lambda
   void f3()
   {
     auto l1 = [] {};
@@ -52,9 +52,15 @@ namespace
     // this will not compile.
     //l3 = l1;
   }
+
+  void generic_lambda()
+  {
+    auto gl = [] (auto a) { return a; };
+    std::cout << gl(1) << '\n' << gl('a') << '\n';
+  }
 }
 
-void testLamda()
+void testLambda()
 {
-  f4();
+  generic_lambda();
 }

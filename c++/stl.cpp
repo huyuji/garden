@@ -3,6 +3,7 @@
 #include <tuple>
 #include <map>
 #include <set>
+#include <functional>
 
 namespace
 {

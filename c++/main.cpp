@@ -11,13 +11,12 @@ void testStlStringStream();
 void testTemplate();
 void testStl();
 void testReturnValueOptimization();
-void testLamda();
+void testLambda();
 void testStlIterator();
 void testStlReverseIterator();
 void testStlUnorderedSet();
 void testStlSet();
 void testStlMap();
-void testStlSet();
 void testStlList();
 void testStlForwardList();
 void testStlArray();
@@ -26,9 +25,10 @@ void testStlString();
 void testStlAlgorithm();
 void testSizeof();
 void testUndefinedBehavior();
+void testStructuredBinding();
 
 // Unlike C, C++ defines an implicit return 0; at the end of int main()
 int main()
 {
-  testStlSet();
+  testTemplate();
 }

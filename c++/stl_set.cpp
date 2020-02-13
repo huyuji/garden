@@ -22,7 +22,7 @@ namespace
     // the assignment operator (of set or multiset) assigns the elements and the sorting criterion; 
     // otherwise, an assignment would be an easy way to compromise the sorting criterion.
     s1 = s2;
-	// comp is no longer directly accessible in visual studio 2017
+	  // comp is no longer directly accessible in visual studio 2017
     // std::cout << s1.comp.id;
   }
 

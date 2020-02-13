@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <limits>
+#include <limits.h>
 
 namespace
 {
@@ -30,7 +32,7 @@ namespace
     }
   }
 
-  std::string u2(std::string& s = std::string("s"))
+  std::string u2(const std::string& s = std::string("s"))
   {
     return s;
   }
@@ -59,7 +61,7 @@ namespace
 
   void f5()
   {
-    std::cout << (unsigned int)nullptr << std::endl;
+    std::cout << (long)nullptr << std::endl;
   }
 
   void f6()

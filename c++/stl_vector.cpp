@@ -32,8 +32,6 @@ namespace
   {
     std::vector<A> v(2);
     std::cout << v.capacity() << std::endl;
-
-    v.push_back(A());
   }
 
   void f2()

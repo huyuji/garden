@@ -67,9 +67,38 @@ namespace
     d.assign(d);  // OK
     d.assign(i);  // OK (int is assignable to double)
   }
+
+  template<typename T> constexpr T number = T(3.14);
+  void variableTemplate()
+  {
+    std::cout << number<int> << '\n' << number<double> << '\n';
+  }
+
+  template<typename ...Args>
+  void printer(Args... args)
+  {
+    std::cout << ... << args << '\n'; // parenthesis is required for the fold expression is be recognized
+  }
+
+  template<typename ...Args>
+  int sum(Args&&... args)
+  {
+    /**
+     * Error: operator with precedence below cast
+     * clang 6.0.0 error: expression not permitted as operand of fold expression
+     */
+    //return (args + ... + 1 * 2);
+    return (args + ... + (1 * 2));
+  }
+
+  void foldExpression()
+  {
+    std::cout << sum(1, 2.1) << '\n';
+    printer(1, 'a', "string", 3.14);
+  }
 }
 
 void testTemplate()
 {
-  f2();
+  foldExpression();
 }

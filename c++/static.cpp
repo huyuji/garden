@@ -21,7 +21,7 @@ namespace
     std::cout << A::i << std::endl
       << A::b << std::endl
       << A::c << std::endl
-      << &A::i << std::endl
+      //<< &A::i << std::endl // clang 6.0.0 linker error: undefined reference to `(anonymous namespace)::A::i'
       ;
   }
 }
