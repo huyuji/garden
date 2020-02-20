@@ -77,7 +77,7 @@ namespace
   template<typename ...Args>
   void printer(Args... args)
   {
-    std::cout << ... << args << '\n'; // parenthesis is required for the fold expression is be recognized
+    (std::cout << ... << args) << '\n'; // parenthesis is required for the fold expression is be recognized
   }
 
   template<typename ...Args>

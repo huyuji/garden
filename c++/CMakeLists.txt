@@ -42,6 +42,7 @@ target_sources(cpp
     template.cpp
     undefined_behavior.cpp
     structured_binding.cpp
+    stl_regex.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
