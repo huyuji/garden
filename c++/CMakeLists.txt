@@ -15,6 +15,7 @@ target_sources(cpp
     fundamental_type.cpp
     hash.cpp
     inheritance.cpp
+    inheritance2.cpp
     inline.cpp
     lambda.cpp
     macro.cpp

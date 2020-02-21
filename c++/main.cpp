@@ -3,6 +3,7 @@ void testCpp();
 void testClass();
 void testException();
 void testInheritance();
+void testInheritance2();
 void testStlVector();
 void testFundamentalType();
 void testStatic();
@@ -31,5 +32,5 @@ void testRegex();
 // Unlike C, C++ defines an implicit return 0; at the end of int main()
 int main()
 {
-  testRegex();
+  testInheritance2();
 }
