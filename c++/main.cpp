@@ -28,9 +28,11 @@ void testSizeof();
 void testUndefinedBehavior();
 void testStructuredBinding();
 void testRegex();
+void testRvalue();
+void testStruct();
 
 // Unlike C, C++ defines an implicit return 0; at the end of int main()
 int main()
 {
-  testInheritance2();
+  testStruct();
 }

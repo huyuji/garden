@@ -44,6 +44,8 @@ target_sources(cpp
     undefined_behavior.cpp
     structured_binding.cpp
     stl_regex.cpp
+    rvalue.cpp
+    struct.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
