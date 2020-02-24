@@ -17,6 +17,7 @@ target_sources(cpp
     inheritance.cpp
     inheritance2.cpp
     inline.cpp
+    inline2.cpp
     lambda.cpp
     macro.cpp
     main.cpp
@@ -51,3 +52,5 @@ target_sources(cpp
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
+
+set(CMAKE_CXX_FLAGS "-Winline")

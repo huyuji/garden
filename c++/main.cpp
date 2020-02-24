@@ -1,3 +1,5 @@
+#include <iostream>
+
 void testCheckedDelete();
 void testCpp();
 void testClass();
@@ -30,9 +32,14 @@ void testStructuredBinding();
 void testRegex();
 void testRvalue();
 void testStruct();
+void testInline();
+void testInline2();
+int inlineFunctionWithDifferentImplementation();
 
 // Unlike C, C++ defines an implicit return 0; at the end of int main()
 int main()
 {
-  testStruct();
+  testInline();
+  testInline2();
+  std::cout << inlineFunctionWithDifferentImplementation() << '\n';
 }

@@ -16,7 +16,11 @@ namespace
   }
 }
 
+inline int inlineFunctionWithDifferentImplementation() {
+  return 1;
+}
+
 void testInline()
 {
-  f2();
+  std::cout << inlineFunctionWithDifferentImplementation() << "\n";
 }
