@@ -47,6 +47,7 @@ target_sources(cpp
     stl_regex.cpp
     rvalue.cpp
     struct.cpp
+    fstream.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
