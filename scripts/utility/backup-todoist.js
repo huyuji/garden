@@ -33,6 +33,7 @@ function downloadBackup(url, name)
     exec(command, (error) => {
         if (error) {
             console.log(`error: ${error}`);
+            process.exitCode = 1;
         } else {
             console.log(`success`);
         }
@@ -52,16 +53,18 @@ function processBackupList(data) {
 }
 
 function request(options, onLoad) {
-    const req = https.request(options, (response) => {
+    const request = https.request(options, (response) => {
         if (response.statusCode !== 200) {
             console.log(`statusCode: ${response.statusCode}`);
+            process.exitCode = 1;
         } else {
             response.on('data', onLoad);
         }        
     });
-    req.on('error', (error) => {
+    request.on('error', (error) => {
         console.log(`error: ${error}`);
+        process.exitCode = 1;
     })
-    req.write(data)
-    req.end()
+    request.write(data)
+    request.end()
 }
