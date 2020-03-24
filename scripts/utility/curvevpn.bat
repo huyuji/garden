@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\OpenVPN Technologies\OpenVPN Client\core\ovpncli.exe" -t vpn.curvedms.org:49999 -u <user name> -p <password> -U connect
