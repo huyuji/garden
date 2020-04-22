@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FreeFileSync XmlType="GUI" XmlFormat="15">
     <Compare>
-        <Variant>TimeAndSize</Variant>
+        <Variant>Content</Variant>
         <Symlinks>Exclude</Symlinks>
         <IgnoreTimeShift/>
     </Compare>
     <Synchronize>
-        <Variant>TwoWay</Variant>
+        <Variant>Mirror</Variant>
         <DetectMovedFiles>false</DetectMovedFiles>
         <DeletionPolicy>RecycleBin</DeletionPolicy>
         <VersioningFolder Style="Replace"/>
@@ -37,6 +37,6 @@
     <LogFolder/>
     <EmailNotification Condition="Always"/>
     <Gui>
-        <MiddleGridView>Action</MiddleGridView>
+        <MiddleGridView>Category</MiddleGridView>
     </Gui>
 </FreeFileSync>
