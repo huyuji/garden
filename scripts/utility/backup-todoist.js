@@ -2,7 +2,7 @@
 // curl -L -H "Authorization: Bearer 0123456789abcdef0123456789abcdef01234567" https://downloads.todoist.com/12345678901234567890123456789012.zip
 
 const token = '';
-const backupFolder = ''
+const backupFolder = 'D:/private/googledrives/googledrive-huyuji1986/backup/todoist'
 
 const urlGetBackups = 'https://api.todoist.com/sync/v8/backups/get';
 
