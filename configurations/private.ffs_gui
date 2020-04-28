@@ -21,7 +21,11 @@
             <Item>\RECYCLE?\</Item>
             <Item>*\desktop.ini</Item>
             <Item>*\thumbs.db</Item>
-            <Item>\backuped\</Item>
+            <Item>\TV\</Item>
+            <Item>\code\</Item>
+            <Item>\googledrives\googledrive-huyuji1986\</Item>
+            <Item>\resources-backuped\</Item>
+            <Item>\google-takeout\</Item>
         </Exclude>
         <TimeSpan Type="None">0</TimeSpan>
         <SizeMin Unit="None">0</SizeMin>
@@ -29,8 +33,8 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left>D:\private\resources</Left>
-            <Right>E:\resources</Right>
+            <Left>D:\private</Left>
+            <Right>E:\</Right>
         </Pair>
     </FolderPairs>
     <Errors Ignore="false" Retry="0" Delay="5"/>

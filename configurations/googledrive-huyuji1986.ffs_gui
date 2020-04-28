@@ -28,8 +28,8 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left>D:\private\googledrives</Left>
-            <Right>E:\googledrives</Right>
+            <Left>D:\private\googledrives\googledrive-huyuji1986</Left>
+            <Right>E:\googledrives\googledrive-huyuji1986</Right>
         </Pair>
     </FolderPairs>
     <Errors Ignore="false" Retry="0" Delay="5"/>
