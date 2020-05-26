@@ -4,7 +4,7 @@ start "" D:\private\portables\Insomnia.exe
 start "" D:\private\code\garden\scripts\autohotkey\hotstring.ahk
 start "" D:\private\code\garden\scripts\autohotkey\jira.ahk
 start "" "C:\Program Files (x86)\WeChat\WeChat.exe"
-REM start "" C:\Users\Yuji\AppData\Local\Glip\RingCentral.exe
+start "" C:\Users\Yuji\AppData\Local\Programs\RingCentral\RingCentral.exe
 start "" "C:\Program Files\OpenVPN Connect\OpenVPNConnect.exe"
 start "" "C:\Program Files (x86)\eudic\eudic.exe"
 start "" "C:\Program Files (x86)\Microsoft\BingDesktop\BingDesktop.exe"
