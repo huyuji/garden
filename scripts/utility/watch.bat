@@ -1,8 +1,20 @@
+rem comost giveaway
 start https://www.calgary.ca/UEP/WRS/Pages/Recycling-information/Residential-services/Green-cart/Green-Cart-Compost-Giveaway.aspx
 
-start https://www.ymcacalgary.org/closure-faqs/
+rem paw patrol helmet
+start https://www.toysrus.ca/en/Paw-Patrol-Toddler-Skye-Helmet/C48F0AAD.html
 
-start https://www.costco.ca/hp-officejet-5255-all-in-one-colour-printer.product.100486925.html
+rem work email
+start https://mail.google.com/mail/ca/u/1/#inbox
 
-start https://www.costco.ca/hp-envy-photo-7855-all-in-one-printer.product.100397626.html
+rem crucible
+start https://crucible.curvedms.org/cru?filter=inbox
 
+rem work calendar
+start https://calendar.google.com/calendar/b/1/r/week?pli=1
+
+rem email
+start https://mail.google.com/mail/ca/u/0/#inbox
+
+rem calendar
+start https://calendar.google.com/calendar/r/week
