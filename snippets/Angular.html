@@ -1,0 +1,27 @@
+password inputs with visibility toggle
+<mat-form-field>
+	<mat-label>{{ 'Admin.UserManagement.UpdatePasswordDialog.NEW_PASSWORD' | translate }}</mat-label>
+	<input matInput [type]="hideNewPassword ? 'password' : 'text'" formControlName="newPassword">
+	<button mat-icon-button matSuffix (click)="hideNewPassword = !hideNewPassword">
+		<mat-icon>{{ hideNewPassword ? 'visibility' :  'visibility_off' }}</mat-icon>
+	</button>
+	<mat-error *ngIf="hasError('newPassword', 'required')">
+		{{ 'Common.REQUIRED' | translate }}
+	</mat-error>
+	<mat-error *ngIf="hasError('newPassword', 'passwordNotMeetsPolicy')">
+		{{ 'Admin.UserManagement.UpdatePasswordDialog.Errors.PASSWORD_POLICY_NOT_MET' | translate }}
+	</mat-error>
+</mat-form-field>
+<mat-form-field>
+	<mat-label>{{ 'Admin.UserManagement.UpdatePasswordDialog.VERIFY_PASSWORD' | translate }}</mat-label>
+	<input matInput [type]="hideVerifyPassword ? 'password' : 'text'" formControlName="verifyPassword" [errorStateMatcher]="verifyPasswordFieldErrorMatcher">
+	<button mat-icon-button matSuffix (click)="hideVerifyPassword = !hideVerifyPassword">
+		<mat-icon>{{ hideVerifyPassword ? 'visibility' :  'visibility_off' }}</mat-icon>
+	</button>
+	<mat-error *ngIf="hasError('verifyPassword', 'required')">
+		{{ 'Common.REQUIRED' | translate }}
+	</mat-error>
+	<mat-error *ngIf="form.errors?.passwordsNotMatch">
+		{{ 'Admin.UserManagement.UpdatePasswordDialog.Errors.PASSWORDS_NOT_MATCH' | translate }}
+	</mat-error>
+</mat-form-field>
