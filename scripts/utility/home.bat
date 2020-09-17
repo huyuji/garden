@@ -7,7 +7,7 @@ start "" "C:\Program Files (x86)\WeChat\WeChat.exe"
 rem start "" C:\Users\Yuji\AppData\Local\Glip\RingCentral.exe
 rem start "" "C:\Program Files\OpenVPN Connect\OpenVPNConnect.exe"
 start "" "C:\Program Files (x86)\eudic\eudic.exe"
-start "" "C:\Program Files (x86)\Microsoft\BingDesktop\BingDesktop.exe"
+rem start "" "C:\Program Files (x86)\Microsoft\BingDesktop\BingDesktop.exe"
 start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 start "" C:\Users\Yuji\AppData\Local\Todoist\WindowsDesktopApp\Todoist.exe
 start "" "C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE"
