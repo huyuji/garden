@@ -21,9 +21,13 @@
             <Item>\RECYCLE?\</Item>
             <Item>*\desktop.ini</Item>
             <Item>*\thumbs.db</Item>
-            <Item>\code\</Item>
             <Item>\TV\</Item>
             <Item>\temp\</Item>
+            <Item>\CurveDental\</Item>
+            <Item>\portables\Beyond Compare 4\BCSessions.xml</Item>
+            <Item>\portables\Beyond Compare 4\BCSessions.xml.bak</Item>
+            <Item>\portables\Beyond Compare 4\BCState.xml</Item>
+            <Item>\portables\Beyond Compare 4\BCState.xml.bak</Item>
         </Exclude>
         <TimeSpan Type="None">0</TimeSpan>
         <SizeMin Unit="None">0</SizeMin>
