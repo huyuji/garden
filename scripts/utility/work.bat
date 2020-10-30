@@ -1,15 +1,13 @@
-explorer "C:\Program Files (x86)\FreeCommander XE\FreeCommander.exe"
-explorer "C:\Program Files (x86)\Hourglass\Hourglass.exe"
-explorer D:\private\portables\Insomnia.exe
-explorer D:\private\code\garden\scripts\autohotkey\hotstring.ahk
-explorer D:\private\code\garden\scripts\autohotkey\jira.ahk
-explorer "C:\Program Files (x86)\WeChat\WeChat.exe"
-explorer C:\Users\Yuji\AppData\Local\Programs\RingCentral\RingCentral.exe
-explorer "C:\Program Files\OpenVPN Connect\OpenVPNConnect.exe"
-explorer "C:\Program Files (x86)\eudic\eudic.exe"
-explorer "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-explorer C:\Users\Yuji\AppData\Local\Todoist\WindowsDesktopApp\Todoist.exe
-explorer "C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE"
-start "" "C:\Program Files\VirtualBox\VirtualBoxVM.exe" --comment "devvm" --startvm "{3744bffa-2c4e-4093-a013-543e18f874e0}"
-
-rem explorer "C:\Program Files (x86)\Microsoft\BingDesktop\BingDesktop.exe"
+start "" "C:\Program Files (x86)\FreeCommander XE\freecommander.exe"
+start "" "C:\Users\yuji.hu\AppData\Local\Todoist\WindowsDesktopApp\todoist.exe"
+start "" "C:\Program Files\Microsoft Office\root\Office16\outlook.exe"
+start "" "C:\Program Files\OpenVPN\bin\openvpn-gui.exe"
+start "" "C:\Users\yuji.hu\AppData\Local\Wox\app-1.4.1196\wox.exe"
+start "" "C:\Program Files (x86)\Hourglass\hourglass.exe"
+start "" "C:\Program Files (x86)\eudic\eudic.exe"
+start "" "C:\Users\yuji.hu\Documents\private\shortcuts.ahk"
+start "" "C:\portables\cmder_mini\cmder.exe"
+start "" https://clockify.me/timesheet
+start "" "C:\Users\yuji.hu\AppData\Local\Microsoft\Teams\current\Teams.exe"
+code C:\Users\yuji.hu\Documents\report42
+code C:\Users\yuji.hu\Documents\cvi42
