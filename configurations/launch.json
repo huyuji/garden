@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/../cvi42-debug/production/Debug/bin/cvi42.app/Contents/MacOS/cvi42",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "visualizerFile": "/Users/yuji/Documents/code/qt-natvis/qt5.natvis.xml",
+            "showDisplayString": true,
+            "miDebuggerPath": "/Applications/Xcode10.app/Contents/Developer/usr/bin/lldb-mi"
+        }
+    ]
+}
