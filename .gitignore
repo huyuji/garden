@@ -218,3 +218,6 @@ pip-log.txt
 
 
 localized-with-secret/
+*.dSYM
+._*
+.*.stash
