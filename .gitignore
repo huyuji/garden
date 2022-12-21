@@ -221,3 +221,5 @@ localized-with-secret/
 *.dSYM
 ._*
 .*.stash
+
+.vscode/
